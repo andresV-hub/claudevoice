@@ -1,0 +1,23 @@
+[project]
+name = "voice-claude"
+version = "5.0.0"
+description = "Claude Code controlado por voz en español"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+# El proyecto captura excepciones amplias a proposito: un fallo
+# del microfono o del TTS no debe tumbar el bucle de voz.
+ignore = ["B904"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

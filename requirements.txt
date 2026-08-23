@@ -1,0 +1,21 @@
+# Dependencias directas de Voice Claude.
+#
+#   python -m venv .venv
+#   .venv\Scripts\pip install -r requirements.txt
+
+# Transcripcion
+faster-whisper>=1.2.1
+
+# Deteccion de voz
+silero-vad>=6.2.0
+torch>=2.6.0
+
+# Captura de microfono
+sounddevice>=0.5.0
+numpy>=2.0.0
+
+# Atajos de teclado globales
+keyboard>=0.13.5
+
+# Sintesis de voz por SAPI (solo Windows)
+pywin32>=306
